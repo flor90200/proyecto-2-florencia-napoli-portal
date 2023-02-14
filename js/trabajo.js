@@ -159,3 +159,4 @@ resultado_busqueda * precio_a_pagar_strass ;
         alert("Total: $" + cantidad_total);
     }
 
+
