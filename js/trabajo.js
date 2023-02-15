@@ -88,6 +88,8 @@ let resultado_busqueda = lista_productos.find (buscar_producto);
 
 if (resultado_busqueda != undefined) {
 
+    let precio_cliente = buscar_producto(resultado_busqueda.precio, usuario);
+
 if ( resultado_busqueda.get_stock()){
 
     let unidades = prompt ("¿Cuantos servicios queres?");
@@ -113,50 +115,5 @@ else {
 }
 
 
-let precio_a_pagar_clasicas = precio_a_pagar (lista_productos[0] .precio ,usuario);
-let precio_a_pagar_medio = precio_a_pagar (lista_productos[1] .precio ,usuario);
-let precio_a_pagar_ruso = precio_a_pagar (lista_productos[2].precio,usuario);
-let precio_a_pagar_mega = precio_a_pagar (lista_productos[3].precio,usuario);
-let precio_a_pagar_remocion = precio_a_pagar (lista_productos[4].precio,usuario);
-let precio_a_pagar_color = precio_a_pagar (lista_productos[5].precio,usuario);
-let precio_a_pagar_strass = precio_a_pagar (lista_productos[6].precio,usuario);
-
-
-
-if(lista_productos[0]  > 0){
-    alert("compraste " + lista_productos[0]) + "y gastaste $" + resultado_busqueda * precio_a_pagar_clasicas
-}
-
-if(lista_productos[1]  > 0){
-    alert("compraste " + lista_productos[1]) + "y gastaste $" + resultado_busqueda * precio_a_pagar_medio
-}
-if(lista_productos[2]  > 0){
-    alert("compraste " + lista_productos[2]) + "y gastaste $" +resultado_busqueda * precio_a_pagar_ruso
-}
-if(lista_productos[3]  > 0){
-    alert("compraste " + lista_productos[3]) + "y gastaste $" + resultado_busqueda * precio_a_pagar_mega
-}
-if(lista_productos[4]  > 0){
-    alert("compraste " + lista_productos[4]) + "y gastaste $" + resultado_busqueda * precio_a_pagar_remocion
-}
-if(lista_productos[5]  > 0){
-    alert("compraste " + lista_productos[5]) + "y gastaste $" + resultado_busqueda* precio_a_pagar_color
-}
-if(lista_productos[6]  > 0){
-    alert("compraste " + lista_productos[6]) + "y gastaste $" +resultado_busqueda * precio_a_pagar_strass
-}
-
-let cantidad_total = 
-resultado_busqueda * precio_a_pagar_clasicas +
-resultado_busqueda * precio_a_pagar_medio + 
-resultado_busqueda * precio_a_pagar_ruso  +
-resultado_busqueda  * precio_a_pagar_mega +
-resultado_busqueda * precio_a_pagar_remocion +
-resultado_busqueda * precio_a_pagar_color +
-resultado_busqueda * precio_a_pagar_strass ;
-
-    if (cantidad_total != NaN) {
-        alert("Total: $" + cantidad_total);
-    }
 
 
